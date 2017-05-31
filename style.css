@@ -17,6 +17,7 @@
   vertical-align: top;
   text-align: center;
   margin-right: 0em;
+  cursor: pointer;
 }
 
 /* All images within list items within icons classes */

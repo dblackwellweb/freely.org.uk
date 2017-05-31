@@ -42,14 +42,22 @@ console.log()
  });
 
 
+function initBouncing(bounceHeight){
+allicons = $('.icon-container')
+for (var i = allicons.length - 1; i >= 0; i--) {
+  bounceicon(allicons[i].id,bounceHeight)
+}
 }
 
 
-
-
-function iconClicked(iconID){
-
+function bounceicon(iconID,bounceHeight){
+$("#" + iconID).on('mouseenter mouseleave',function( e ) {
+  var el = $(this).children();
+  if(!el.data("bnc")) el.effect("bounce", { direction:'up', distance:bounceHeight, times:1 });
+  el.data("bnc", e.type=="mouseenter" ? true : false );
+});
 }
+
 
 function activatePopUp(iconID){
   // change popup image and links based on icon id:
@@ -73,3 +81,8 @@ function popUpIsActive(){
   var active = $(".selected").css("display")!='none';
   return(active);
 }
+
+initBouncing(5);
+}
+
+
