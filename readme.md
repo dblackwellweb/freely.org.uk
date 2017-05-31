@@ -9,7 +9,6 @@ The aim is to have a super simple website that provides no fuss no muss and clea
 ## or, especially if each icon has a lot of content behind it, keep the popup but use it to give the user an overview of what this book is about in addition to a button that leads to the online view. 
 
 ## Visual
-### transparent background for icons (they overlap sometimes due to bouncing). could alternatively be fixed by placing icons slightly further apart.
 ### dont understand / clarify please. you want it to exand? it does but it shouldnt? what do you mean by expand into center?---->>> pop-up boxes (.selected) to seem to expand into centre - jQuery slide-toggle?
 ## Functional
 ### Online pdf viewing
