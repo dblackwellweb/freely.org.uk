@@ -106,5 +106,6 @@ html, body {
 }
 .clickdump.active{
   display: block;
-  opacity: 0;
+  opacity: 0.6;
+  background-color: white;
 }
