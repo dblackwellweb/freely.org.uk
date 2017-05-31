@@ -41,15 +41,15 @@
 
 .selected {
   display: none;
-  width : 30vw;
+  position:fixed;
+  width : 33%;
   text-align: center;
   border: 1px grey solid;
   background: white;
-  position:fixed;
   top: 16%;
-  left: 35vw;
+  left: 33%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 .selected{
   width:70vw;
 }

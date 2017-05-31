@@ -9,7 +9,10 @@ function init(){
   $('li').click(function(event){
     // activate the popup and pass it the id of the icon that was clicked.
     // the activatePopUp function uses the id to produce the image, pdf and html urls dynamically.
-    activatePopUp(this.id);
+    
+    if(!popUpIsActive()){ // only open popup if not already active
+      activatePopUp(this.id);
+    } 
   });
 
   $('.body').click(function(){
@@ -29,11 +32,12 @@ function init(){
 $(document).mouseup(function (e) {
      var popup = $(".selected");
      if (!popup.is(e.target) && popup.has(e.target).length == 0 // if the click didnt target the popup..
-      && $(popup).css("display")!='none' // AND if the popup visibility was not set to 'none'
+      && popUpIsActive() // AND if the popup is active
       ) {
      hidePopUp(); // then hide the popup!
-     }
-  
+    e.stopPropagation() // this should prevent any other events the click might have triggered such as opening a new popup straight away
+}
+
 console.log()
  });
 
@@ -64,4 +68,8 @@ function hidePopUp(iconID){
     })
 }
 
-
+function popUpIsActive(){
+  // returns true if the popup is active, false if not
+  var active = $(".selected").css("display")!='none';
+  return(active);
+}
