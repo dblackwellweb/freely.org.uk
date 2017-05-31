@@ -1,6 +1,5 @@
 // everything thats executed upon load is in this function
 // that way we can execute the code after all scripts are downloaded.
-var icons_clickable= true;
 
 function init(){
 
@@ -8,7 +7,6 @@ function init(){
 
   // Scripts go here
   $('li').click(function(event){
-    if(icons_clickable){
     // activate the popup and pass it the id of the icon that was clicked.
     // the activatePopUp function uses the id to produce the image, pdf and html urls dynamically.
     
@@ -16,7 +14,6 @@ function init(){
       console.log('popup wasnt active. opening popup')
       activatePopUp(this.id);
     }
-    } 
   });
 
   // $('.body').click(function(){
@@ -71,21 +68,28 @@ function activatePopUp(iconID){
   $('#popup-online-link').attr("href",iconID+".html");
   $('#popup-download-link').attr("href",iconID+".pdf");
   // make popup visible:
-  $('.selected').css({
-      display: 'block'
-    })
-  icons_clickable=false;
+  $('.selected').addClass("popupON")
+  $('.selected').removeClass("popupOFF")
+  $('.clickdump').addClass('active')
+
 }
+
 function hidePopUp(iconID){
   // change popup image and links based on icon id:
-  $('.selected').css({
-      display: 'none'
-    })
-  icons_clickable=true;
+    $('.selected').addClass("popupOFF")
+    $('.selected').removeClass("popupON")
+    $('.clickdump').removeClass('active')
 }
+
+
+
+
 
 function popUpIsActive(){
   // returns true if the popup is active, false if not
-  var active = $(".selected").css("display")!='none';
+  var active = $(".selected").hasClass("popupON");
   return(active);
 }
+
+
+
