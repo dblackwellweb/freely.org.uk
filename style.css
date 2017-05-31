@@ -1,0 +1,66 @@
+.body {
+  font-size: 15px;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+ .icons {
+   margin-top: 40vh;
+   text-align:center; /* Content is aligned using the text-align property- because we're telling out li items below to work as inline-blocks (little bricks which lay themselves out like words in a line), they'll not follow the text-align rules. */
+   margin-left: 0em;
+}
+
+.icons li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 0em;
+}
+
+/* All images within list items within icons classes */
+.icons li img {
+  width: 7em; /* Write your sizes in EMs not pixels PX. It makes it easy to resize things. I set the size on 1 em to 15 px just ealier, but size things by eye/ with some triganometry */
+  height: 7em;
+}
+
+.icons li h1 {
+  font-size: 1em;
+}
+
+.divider{
+  width: 100%;
+  height: 5em;
+  background: white;
+  padding: 1em;
+  text-align: center;
+  margin: 4em 0;
+  color: white;
+}
+
+.selected {
+  display: none;
+  width : 30vw;
+  text-align: center;
+  border: 1px grey solid;
+  background: white;
+  position:fixed;
+  top: 16%;
+  left: 35vw;
+}
+.selected nav{
+  position: relative;
+  padding: 1em 0;
+}
+.selected a {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+}
+
+.selected .big-img {
+  height: inherit;
+  width: 25vw; /* Write your sizes in EMs not pixels PX. It makes it easy to resize things. I set the size on 1 em to 15 px just ealier, but size things by eye/ with some triganometry */
+  padding: 0em; /* Watch out - padding goes inside the element, so it uses up width. Set your width wide enough for your content and padding */
+}
