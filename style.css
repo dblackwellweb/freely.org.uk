@@ -55,6 +55,11 @@ html, body {
   top: 16%;
   left: 33%;
   -moz-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  
   z-index: 2;
 }
 .selected.popupON{
