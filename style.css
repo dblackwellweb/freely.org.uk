@@ -6,7 +6,8 @@
 }
 
  .icons {
-   margin-top: 40vh;
+   margin-top: 20%;
+   width: 100%;
    text-align:center; /* Content is aligned using the text-align property- because we're telling out li items below to work as inline-blocks (little bricks which lay themselves out like words in a line), they'll not follow the text-align rules. */
    margin-left: 0em;
 }
@@ -51,6 +52,9 @@
   left: 33%;
 }
 @media screen and (max-width: 500px) {
+.icons{
+  margin-top: 20%;
+}
 .selected{
   width:66%;
   left: 16.55%;

@@ -1,5 +1,6 @@
 // everything thats executed upon load is in this function
 // that way we can execute the code after all scripts are downloaded.
+var icons_clickable= true;
 
 function init(){
 
@@ -7,19 +8,22 @@ function init(){
 
   // Scripts go here
   $('li').click(function(event){
+    if(icons_clickable){
     // activate the popup and pass it the id of the icon that was clicked.
     // the activatePopUp function uses the id to produce the image, pdf and html urls dynamically.
     
     if(!popUpIsActive()){ // only open popup if not already active
+      console.log('popup wasnt active. opening popup')
       activatePopUp(this.id);
+    }
     } 
   });
 
-  $('.body').click(function(){
-    $('.selected').css({
-      display: 'none'
-    })
-  });
+  // $('.body').click(function(){
+  //   $('.selected').css({
+  //     display: 'none'
+  //   })
+  // });
 
   $( "icon" ).click(function() {
     $( "#book" ).slideToggle( "slow", function() {
@@ -30,16 +34,18 @@ function init(){
 
 
 $(document).mouseup(function (e) {
-     var popup = $(".selected");
-     if (!popup.is(e.target) && popup.has(e.target).length == 0 // if the click didnt target the popup..
-      && popUpIsActive() // AND if the popup is active
-      ) {
-     hidePopUp(); // then hide the popup!
-    e.stopPropagation() // this should prevent any other events the click might have triggered such as opening a new popup straight away
-}
+  var popup = $(".selected");
 
-console.log()
+  // if the click didnt target the popup AND if the popup is active then hide the popup!
+  if (!popup.is(e.target) && popup.has(e.target).length == 0 && popUpIsActive()) {
+        console.log("hiding popup")
+        hidePopUp(); 
+        e.stopPropagation(); // this should prevent any other events the click might have triggered such as opening a new popup straight away
+       }
  });
+
+initBouncing(5);
+}
 
 
 function initBouncing(bounceHeight){
@@ -68,12 +74,14 @@ function activatePopUp(iconID){
   $('.selected').css({
       display: 'block'
     })
+  icons_clickable=false;
 }
 function hidePopUp(iconID){
   // change popup image and links based on icon id:
   $('.selected').css({
       display: 'none'
     })
+  icons_clickable=true;
 }
 
 function popUpIsActive(){
@@ -81,8 +89,3 @@ function popUpIsActive(){
   var active = $(".selected").css("display")!='none';
   return(active);
 }
-
-initBouncing(5);
-}
-
-
