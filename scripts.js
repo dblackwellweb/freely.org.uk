@@ -1,3 +1,9 @@
+// everything thats executed upon load is in this function
+// that way we can execute the code after all scripts are downloaded.
+
+function init(){
+
+
 $( document ).ready( function() {
   // Scripts go here
   $('li').click(function(event){
@@ -21,3 +27,19 @@ $( document ).ready( function() {
 
 
 });
+
+
+
+
+$(document).mouseup(function (e) {
+     var popup = $("#popup");
+     if (!$('#open').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+         popup.hide(500);
+     }
+ });
+
+
+}
+
+
+
