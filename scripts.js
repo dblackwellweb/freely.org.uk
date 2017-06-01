@@ -42,7 +42,7 @@ function bounceicon(iconID,bounceHeight){
       distance:bounceHeight,
       times:1,
       easing: 'easeOutQuint'
-     });
+    }, 400);
     el.data("bnc", e.type=="mouseenter" ? true : false );
   });
 }
