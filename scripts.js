@@ -47,7 +47,6 @@ function bounceicon(iconID,bounceHeight){
   });
 }
 
-
 function activatePopUp(iconID){
   // change popup image and links based on icon id:
   $('.big-img').attr("src","images_web/"+iconID+"icon.gif");
@@ -66,10 +65,6 @@ function hidePopUp(iconID){
     $('.selected').removeClass("popupON")
     $('.clickdump').removeClass('active')
 }
-
-
-
-
 
 function popUpIsActive(){
   // returns true if the popup is active, false if not
