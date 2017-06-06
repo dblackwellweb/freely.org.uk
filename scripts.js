@@ -65,7 +65,7 @@ $("#" + iconID).on('mouseenter mouseleave',function( e ) {
 function activatePopUp(iconID){
   // change popup image and links based on icon id:
   $('.big-img').attr("src","images_web/"+iconID+"icon.gif");
-  $('#popup-online-link').attr("href",iconID+".html");
+  $('#popup-online-link').attr("href","book.php?book="+iconID);
   $('#popup-download-link').attr("href",iconID+".pdf");
   // make popup visible:
   $('.selected').addClass("popupON")
@@ -91,5 +91,10 @@ function popUpIsActive(){
   return(active);
 }
 
+function nextpage(book){
+pagenumber+=2;
+$('.leftpage').attr('src',"./books/ASFD"+book+"/"+pagenumber+".jpg");
+$('.rightpage').attr('src',"./books/"+book+"/"+pagenumber+".jpg");
+}
 
 
