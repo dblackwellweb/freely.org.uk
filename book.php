@@ -30,15 +30,15 @@
 	 <?php include 'scripts.php'; ?>
 </head>
 <body>
-	<div class='flipbutton left'><</div>
-	<div class='flipbutton right'>></div>
+	<div class='flipbutton left' onclick="previouspage('<?php echo $_GET['book']; ?>')"><</div>
+	<div class='flipbutton right'  onclick="nextpage('<?php echo $_GET['book']; ?>')">></div>
 
 <div class="flipbookcontainer">
 	<div class="flipbook leftpage">
-		<img src="./books/<?php echo $_GET['book'] ?>/1.jpg">
+		<img id='leftpageimage' src="./books/<?php echo $_GET['book'] ?>/1.jpg">
 	</div>
 	<div class="flipbook rightpage">
-		<img src="./books/<?php echo $_GET['book'] ?>/2.jpg">
+		<img id='rightpageimage' src="./books/<?php echo $_GET['book'] ?>/2.jpg">
 		
 
 	</div> 
@@ -47,8 +47,15 @@
 </html>
 
 <script type="text/javascript">
-pagenumber=1;
+ pagenumber=1;
 
+var howmanypages = <?php
+$directory = "./books/" . $_GET['book'] ."/";
+$filecount = 0;
+$files = glob($directory . "*");
+ $filecount = count($files);
+echo $filecount;
+?>;
 
 
 

@@ -72,9 +72,35 @@ function popUpIsActive(){
   return(active);
 }
 
+
+
 function nextpage(book){
-pagenumber+=2;
-$('.leftpage').attr('src',"./books/ASFD"+book+"/"+pagenumber+".jpg");
-$('.rightpage').attr('src',"./books/"+book+"/"+pagenumber+".jpg");
+  pagenumber+=2;
+  pagenumber=setpagenumber(book,pagenumber);
 }
+function previouspage(book){
+pagenumber-=2;
+pagenumber=setpagenumber(book,pagenumber);
+}
+
+function setpagenumber(book,pagenumber){  
+  console.log(pagenumber)
+
+   if(pagenumber<=1){
+    pagenumber=1;
+    $('#leftpageimage').attr('src',"./books/"+book+"/"+pagenumber+".jpg");
+    $('.rightpage').css('visibility',"hidden");
+      console.log(pagenumber)
+    }
+  else if (pagenumber>=howmanypages-1){
+    pagenumber=howmanypages-1;
+  } else{
+     $('#leftpageimage').attr('src',"./books/"+book+"/"+pagenumber+".jpg");
+     $('#rightpageimage').attr('src',"./books/"+book+"/"+(pagenumber+1)+".jpg");
+     $('.rightpage').css('visibility',"visible");
+  }
+return(pagenumber)
+}
+
+
 

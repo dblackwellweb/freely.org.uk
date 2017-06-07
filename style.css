@@ -126,7 +126,15 @@ width: 48%;
 -moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
 box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
 border-style: none;
+opacity: 1;
 }
+.flipbook.rightpage{
+-webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+    visibility: hidden;
+}
+
 
 .flipbutton.left{
   position: fixed;
