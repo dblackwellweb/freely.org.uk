@@ -30,18 +30,17 @@
 	 <?php include 'scripts.php'; ?>
 </head>
 <body>
-	<div class='flipbutton left' onclick="previouspage('<?php echo $_GET['book']; ?>')"><</div>
-	<div class='flipbutton right'  onclick="nextpage('<?php echo $_GET['book']; ?>')">></div>
 
 <div class="flipbookcontainer">
+	<div class='flipbutton left arrowleftsymbol' onclick="previouspage('<?php echo $_GET['book']; ?>')"></div>
 	<div class="flipbook leftpage" onclick="previouspage('<?php echo $_GET['book']; ?>')"> 
 		<img id='leftpageimage' src="./books/<?php echo $_GET['book'] ?>/1.jpg">
 	</div>
 	<div class="flipbook rightpage" onclick="nextpage('<?php echo $_GET['book']; ?>')">
 		<img id='rightpageimage' src="./books/<?php echo $_GET['book'] ?>/2.jpg">
-		
-
 	</div> 
+	<div class='flipbutton right arrowrightsymbol'  onclick="nextpage('<?php echo $_GET['book']; ?>')"></div>
+
 </div>
 
 <div id='footerlinks'>
@@ -66,7 +65,7 @@ echo $filecount;
 ?>;
 
 
-
+setpagenumber("<?php echo $_GET['book'] ?>",1)
 
 
 </script>

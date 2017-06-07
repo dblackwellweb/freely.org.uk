@@ -73,14 +73,25 @@ function popUpIsActive(){
 }
 
 
-
+function isdoublepage(){
+  return($("body").innerWidth()>400);
+}
 function nextpage(book){
+  if(isdoublepage() && pagenumber!=1){
   pagenumber+=2;
+  }else{
+    pagenumber+=1;
+  }
   pagenumber=setpagenumber(book,pagenumber);
 }
+
 function previouspage(book){
-pagenumber-=2;
-pagenumber=setpagenumber(book,pagenumber);
+if(isdoublepage()){
+  pagenumber-=2;
+  }else{
+    pagenumber-=1;
+  }
+  pagenumber=setpagenumber(book,pagenumber);
 }
 
 function setpagenumber(book,pagenumber){  
@@ -96,8 +107,10 @@ function setpagenumber(book,pagenumber){
     pagenumber=howmanypages-1;
   } else{
      $('#leftpageimage').attr('src',"./books/"+book+"/"+pagenumber+".jpg");
-     $('#rightpageimage').attr('src',"./books/"+book+"/"+(pagenumber+1)+".jpg");
-     $('.rightpage').css('visibility',"visible");
+     if(isdoublepage() ){
+        $('#rightpageimage').attr('src',"./books/"+book+"/"+(pagenumber+1)+".jpg");
+        $('.rightpage').css('visibility',"visible")
+     };
   }
 
 if(pagenumber>=howmanypages-1){
