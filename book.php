@@ -34,14 +34,22 @@
 	<div class='flipbutton right'  onclick="nextpage('<?php echo $_GET['book']; ?>')">></div>
 
 <div class="flipbookcontainer">
-	<div class="flipbook leftpage" onclick="previouspage('<?php echo $_GET['book']; ?>'"> 
+	<div class="flipbook leftpage" onclick="previouspage('<?php echo $_GET['book']; ?>')"> 
 		<img id='leftpageimage' src="./books/<?php echo $_GET['book'] ?>/1.jpg">
 	</div>
-	<div class="flipbook rightpage" onclick="nextpage('<?php echo $_GET['book']; ?>'>
+	<div class="flipbook rightpage" onclick="nextpage('<?php echo $_GET['book']; ?>')">
 		<img id='rightpageimage' src="./books/<?php echo $_GET['book'] ?>/2.jpg">
 		
 
 	</div> 
+</div>
+
+<div id='footerlinks'>
+	 <a href="./<?php echo $_GET['book']; ?>">download pdf</a>
+	 <br>
+	 <a href="./edit.php">back to all books</a><br>
+	 <a href="">find out more</a>
+
 </div>
 </body>
 </html>
