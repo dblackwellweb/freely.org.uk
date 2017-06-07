@@ -99,6 +99,22 @@ function setpagenumber(book,pagenumber){
      $('#rightpageimage').attr('src',"./books/"+book+"/"+(pagenumber+1)+".jpg");
      $('.rightpage').css('visibility',"visible");
   }
+
+if(pagenumber>=howmanypages-1){
+  $('.flipbutton.right').css('visibility',"hidden");
+  console.log('upper limit')
+
+}else if(pagenumber<=1){
+  $('.flipbutton.left').css('visibility',"hidden");
+  console.log('lower limit')
+}else{
+    $('.flipbutton.right').css('visibility',"visible");
+    $('.flipbutton.left').css('visibility',"visible");
+
+}
+
+
+
 return(pagenumber)
 }
 
