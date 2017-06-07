@@ -50,8 +50,7 @@
 	 <a href="">find out more</a>
 
 </div>
-</body>
-</html>
+
 
 <script type="text/javascript">
  pagenumber=1;
@@ -69,6 +68,23 @@ setpagenumber("<?php echo $_GET['book'] ?>",1)
 
 
 </script>
+
+
+
+
+<div class="imagepreload">
+<?php for ($i=1; $i <= $filecount; $i++) { 
+?>
+<img class="invisiblepreload" src="./books/<?php echo $_GET['book'] .'/' . $i . '.jpg'?>">
+<?php 
+} ?>
+
+</div>
+
+</body>
+</html>
+
+
 
 
 
