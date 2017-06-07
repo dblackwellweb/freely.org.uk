@@ -34,10 +34,10 @@
 	<div class='flipbutton right'  onclick="nextpage('<?php echo $_GET['book']; ?>')">></div>
 
 <div class="flipbookcontainer">
-	<div class="flipbook leftpage">
+	<div class="flipbook leftpage" onclick="previouspage('<?php echo $_GET['book']; ?>'"> 
 		<img id='leftpageimage' src="./books/<?php echo $_GET['book'] ?>/1.jpg">
 	</div>
-	<div class="flipbook rightpage">
+	<div class="flipbook rightpage" onclick="nextpage('<?php echo $_GET['book']; ?>'>
 		<img id='rightpageimage' src="./books/<?php echo $_GET['book'] ?>/2.jpg">
 		
 
