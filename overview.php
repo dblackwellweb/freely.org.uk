@@ -15,7 +15,13 @@
 
 
   <ul class="icons">
-  <?php for ($i=0; $i < sizeof($bookids); $i++) { ?>
+  <?php for ($i=0; $i < sizeof($bookids); $i++) { 
+if ($bookids[$i]=='STOP') { ?>
+  <a href="https://youtu.be/qq_qS6EjE4I"><li class="icon-container"  id='<?php echo $bookids[$i]; ?>'> 
+        <img src="images_web/<?php echo $bookids[$i]; ?>icon.gif" alt="BE better with your alt text">
+      </li></a>
+ <?php } ?>
+
       <li class="icon-container"  id='<?php echo $bookids[$i]; ?>'> 
         <img src="images_web/<?php echo $bookids[$i]; ?>icon.gif" alt="BE better with your alt text">
       </li>
