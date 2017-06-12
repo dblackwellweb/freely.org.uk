@@ -4,28 +4,38 @@
 <head>
 	<title> <?php if ($_GET['book']=="BEME") {
 			   	echo "Be Me";
-		} else if ($_GET['book']=="BEME2") {
-				echo "Be Me 2";
 		} else if ($_GET['book']=="FEEL") {
 				echo "Feel";
-		} else if ($_GET['book']=="FEEL2") {
-			echo "Feel 2";
+		} else if ($_GET['book']=="SPEAK") {
+			echo "Speak";
+		} else if ($_GET['book']=="LOVEME") {
+			echo "Love Me";
 		} else if ($_GET['book']=="STOP") {
 			echo "Stop";
 		} else if ($_GET['book']=="GO") {
 			echo "Go";
 		} else if ($_GET['book']=="THEIDO") {
 			echo "The (I) do";
+		} else if ($_GET['book']=="LIFE") { 
+			echo "Life";
+		} else if ($_GET['book']=="NOTLIFE") {
+			echo "not Life";
 		} else if ($_GET['book']=="ITTS") {
 			echo "I talk to strangers";
-		} else if ($_GET['book']=="SPEAK") { 
-			echo "Speak";
-		} else if ($_GET['book']=="LIFE") {
-			echo "The meaning of life";
-		} else if ($_GET['book']=="LIVING") {
-			echo "The meaning of living";
 		} 		
 		
+	["BEME"
+	,"FEEL"
+	,"SPEAK"
+	,"LOVEME"
+	,"STOP"
+	,"GO"
+	,"THEIDO"
+	,"LIFE"
+	,"NOTLIFE"
+	,"ITTS"]
+
+
 	 ?></title>
 	 <?php include 'scripts.php'; ?>
 </head>

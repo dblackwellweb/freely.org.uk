@@ -9,7 +9,8 @@ function init(){
     console.log('popup wasnt active. opening popup')
     activatePopUp(this.id);
   });
-
+  $('#GO').unbind();
+  $('#ITTS').unbind();
   $( "icon" ).click(function() {
     $( "#book" ).slideToggle( "slow" );
   });
@@ -49,9 +50,13 @@ function bounceicon(iconID,bounceHeight){
 
 function activatePopUp(iconID){
   // change popup image and links based on icon id:
-  $('.big-img').attr("src","images_web/front"+iconID+".png");
+  $('.big-img').attr("src","./images_web/front"+iconID+".png");
   $('#popup-online-link').attr("href","book.php?book="+iconID);
   $('#popup-download-link').attr("href","./books/"+iconID+".pdf");
+
+  if (iconID=='STOP') {
+      $('#popup-online-link').attr("href","https://youtu.be/qq_qS6EjE4I");
+  }
   // make popup visible:
   $('.selected').addClass("popupON")
   $('.selected').removeClass("popupOFF")

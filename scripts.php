@@ -5,16 +5,15 @@
 
     <?php $bookids= 
 	["BEME"
-	,"BEME2"
 	,"FEEL"
-	,"FEEL2"
+	,"SPEAK"
+	,"LOVEME"
 	,"STOP"
 	,"GO"
 	,"THEIDO"
-	,"ITTS"
-	,"SPEAK"
 	,"LIFE"
-	,"LIVING"] ?>
+	,"NOTLIFE"
+	,"ITTS"] ?>
 
 
 

@@ -10,13 +10,13 @@
     <!-- I've defined this as a list, better for accessibility. UL means unordered list, LI means a list item. -->
   <?php include 'overview.php'; ?>
 
-    <div class="divider">
-    </div>
+    <!-- <div class="divider"> -->
+    <!-- </div> -->
     <div class='clickdump'>
     <!-- an invisible box to sink clicks whenever the popup is open -->
     </div>
     <section class="divider">
-      <a href="">...to find out more</a>
+      <a href="">...to find out more / support</a>
     </section>
 
     <section class="selected popupOFF">
