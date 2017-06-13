@@ -21,7 +21,7 @@ if ($bookids[$i]=='ITTS') { ?>
         <img src="images_web/<?php echo $bookids[$i]; ?>icon.gif" alt="<?php echo 'book ' . $bookids[$i] ?>">
       </li></a>
 <?php }else if($bookids[$i]=='GO'){ ?>
-<a href="./books/go.pdf"><li class="icon-container"  id='<?php echo $bookids[$i]; ?>'> 
+<a href="./books/GO.pdf"><li class="icon-container"  id='<?php echo $bookids[$i]; ?>'> 
         <img src="images_web/<?php echo $bookids[$i]; ?>icon.png" alt="<?php echo 'book ' . $bookids[$i] ?>"></a>
       </li>
  <?php } else { ?>

@@ -74,6 +74,7 @@ a {color: black;}
       transform: scale(0);
       visibility:hidden;
 }
+
 @media screen and (max-width: 500px) {
 .icons{
   margin-top: 20%;
@@ -135,6 +136,32 @@ cursor: pointer;
   box-sizing: border-box;
 
 }
+
+@media screen and (max-width: 800px) {
+.flipbookcontainer{
+  position: relative;
+  width: 80%;
+  margin: 10%;
+  margin-top:5%;
+  vertical-align: top;
+}
+.flipbook{
+position: relative;
+display: inline-block;
+width: 32%;
+height: 100%;
+-webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+border-style: none;
+opacity: 1;
+cursor: pointer;
+  box-sizing: border-box;
+
+}
+}
+
+
 .flipbook.rightpage{
 -webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
 -moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
@@ -170,14 +197,16 @@ img{
 }
 
 .arrowleftsymbol{
+  display: content-box;
   width: 0; 
-  height: 0; 
+  height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid #000000;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   }
 .arrowrightsymbol{
+  display: content-box;
    width: 0; 
    height: 0; 
    border-right: 20px solid transparent;
@@ -190,3 +219,55 @@ img{
 .invisiblepreload{
 display: none;
   }
+
+
+@media screen and (max-width: 400px) {
+.flipbookcontainer{
+  position: relative;
+  width: 90%;
+  margin: 5%;
+  margin-top:5%;
+  vertical-align: top;
+}
+.flipbook{
+position: relative;
+display: inline-block;
+width: 70%;
+height: 100%;
+-webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+border-style: none;
+opacity: 1;
+cursor: pointer;
+  box-sizing: border-box;
+
+}
+.flipbook.rightpage{
+display: none;
+}
+
+.arrowleftsymbol{
+  display: content-box;
+  width: 0; 
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #000000;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  }
+.arrowrightsymbol{
+  display: content-box;
+   width: 0; 
+   height: 0; 
+   border-right: 10px solid transparent;
+   border-left: 10px solid #000000;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+  }
+
+
+}
+
+
+

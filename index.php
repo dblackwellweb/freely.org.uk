@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <HTML>
+
   <HEAD>
     <title>freely</title>
 <?php include 'scripts.php'; ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </HEAD>
 
   <BODY>
@@ -16,7 +18,7 @@
     <!-- an invisible box to sink clicks whenever the popup is open -->
     </div>
     <section class="divider">
-      <a href="">...to find out more / support</a>
+      <a href="https://www.patreon.com/freely">...to find out more / support</a>
     </section>
 
     <section class="selected popupOFF">

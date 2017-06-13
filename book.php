@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
 	<title> <?php if ($_GET['book']=="BEME") {
 			   	echo "Be Me";
 		} else if ($_GET['book']=="FEEL") {
@@ -56,7 +58,7 @@
 <div id='footerlinks'>
 	 <a href="./<?php echo $_GET['book']; ?>">download pdf</a>
 	 <br>
-	 <a href="./edit.php">back to all books</a><br>
+	 <a href="./index.php">back to all books</a><br>
 	 <a href="">find out more</a>
 
 </div>

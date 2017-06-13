@@ -1,6 +1,10 @@
 // everything thats executed upon load is in this function
 // that way we can execute the code after all scripts are downloaded.
 
+
+
+
+
 function init(){
   $('li').click(function(event){
     // activate the popup and pass it the id of the icon that was clicked.
@@ -15,7 +19,7 @@ function init(){
     $( "#book" ).slideToggle( "slow" );
   });
 
-  $(document).bind("mouseup touchup", function(e) {
+  $(document).bind("mouseup touchend", function(e) {
     var popup = $(".selected");
     // if the click didnt target the popup AND if the popup is active then hide the popup!
     if (!popup.is(e.target) && popup.has(e.target).length == 0 && popUpIsActive()) {
@@ -29,10 +33,12 @@ function init(){
 }
 
 function initBouncing(bounceHeight){
+  if(!is_touch_device()){
   allicons = $('.icon-container')
   for (var i = allicons.length - 1; i >= 0; i--) {
     bounceicon(allicons[i].id,bounceHeight)
   }
+}
 }
 
 function bounceicon(iconID,bounceHeight){
@@ -137,4 +143,7 @@ return(pagenumber)
 }
 
 
-
+function is_touch_device() {
+  return 'ontouchstart' in window        // works on most browsers 
+      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+};
