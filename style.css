@@ -1,3 +1,6 @@
+ /*@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');*/
+ @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
+ /*@import url('https://fonts.googleapis.com/css?family=Coming+Soon');*/
 html, body {
   font-size: 15px;
   font-family: sans-serif;
@@ -7,6 +10,10 @@ html, body {
   border: none;
   width: 90%;
   position: relative;
+  /*font-family: 'Cutive Mono', monospace;*/
+  font-family: 'Roboto Mono', monospace;
+  /*font-family: 'Coming Soon';*/
+  font-weight: 400;
 }
 
 a {color: black;}
@@ -54,7 +61,11 @@ a {color: black;}
   position:fixed;
   width : 33%;
   text-align: center;
-  border: 1px grey solid;
+  border: 0px grey solid;
+-webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+
   background: white;
   top: 16%;
   left: 33%;
@@ -63,7 +74,7 @@ a {color: black;}
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-
+  
   z-index: 2;
 }
 .selected.popupON{
@@ -230,21 +241,21 @@ display: none;
   vertical-align: top;
 }
 .flipbook{
-position: relative;
-display: inline-block;
-width: 70%;
-height: 100%;
--webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
-border-style: none;
-opacity: 1;
-cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  -webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+  border-style: none;
+  opacity: 1;
+  cursor: pointer;
   box-sizing: border-box;
-
 }
+
 .flipbook.rightpage{
-display: none;
+  display: none;
 }
 
 .arrowleftsymbol{
@@ -255,9 +266,9 @@ display: none;
   border-right: 10px solid #000000;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  }
+}
 .arrowrightsymbol{
-  display: content-box;
+   display: content-box;
    width: 0; 
    height: 0; 
    border-right: 10px solid transparent;
@@ -265,9 +276,28 @@ display: none;
    border-top: 10px solid transparent;
    border-bottom: 10px solid transparent;
   }
-
-
 }
 
 
+#patreonlink{
+  position: relative;
+  padding: 10px;
+/*  -webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,1);
+  box-shadow: 3px 4px 15px -9px rgba(0,0,0,1);*/
+  width: 20%;
+  left: 40%;
+}
 
+#patreonlink:hover{
+  position: relative;
+  padding: 10px;
+/*  -webkit-box-shadow: 3px 4px 20px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 20px -12px rgba(0,0,0,1);
+  box-shadow: 2px 3px 15px -9px rgba(0,0,0,1);*/
+  -ms-transform: translate(1px, 1px); /* IE 9 */
+    -webkit-transform: translate(1px, 1px); /* Safari */
+    transform: translate(1px, 1px)
+  width: 20%;
+  left: 40%;
+}

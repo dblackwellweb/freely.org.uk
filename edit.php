@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <HTML>
-
   <HEAD>
     <title>freely</title>
 <?php include 'scripts.php'; ?>
 
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </HEAD>
 
   <BODY>
@@ -17,10 +15,8 @@
     <div class='clickdump'>
     <!-- an invisible box to sink clicks whenever the popup is open -->
     </div>
-    <section  class="divider" style="text-align: center;">
-   <a href="https://www.patreon.com/freely"> <div id="patreonlink">
-      ...to find out more / support
-      </div></a>
+    <section class="divider">
+      <a href="https://www.patreon.com/freely">...to find out more / support</a>
     </section>
 
     <section class="selected popupOFF">
@@ -37,3 +33,4 @@
 <script type="text/javascript">
   $( document ).ready(init);
 </script>
+

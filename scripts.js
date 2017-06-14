@@ -14,7 +14,7 @@ function init(){
     activatePopUp(this.id);
   });
   $('#GO').unbind();
-  $('#ITTS').unbind();
+  // $('#ITTS').unbind();
   $( "icon" ).click(function() {
     $( "#book" ).slideToggle( "slow" );
   });
@@ -63,6 +63,17 @@ function activatePopUp(iconID){
   if (iconID=='STOP') {
       $('#popup-online-link').attr("href","https://youtu.be/qq_qS6EjE4I");
   }
+  
+  if (iconID=='ITTS') {
+      $('#popup-online-link').css("display","none");
+      $('#popup-download-link').css("display","none");
+      $('#popup-message').html("I talk to strangers is on hold until freely.org.uk can reinvest in badges.<br><a href='https://www.patreon.com/freely'>...to find out more / support</a>");
+      } else {
+      $('#popup-online-link').css("display","inline");
+      $('#popup-download-link').css("display","inline");
+      $('#popup-message').html("");
+      }
+
   // make popup visible:
   $('.selected').addClass("popupON")
   $('.selected').removeClass("popupOFF")
